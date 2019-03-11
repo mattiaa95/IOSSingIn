@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,74 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="googleSingIn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpd-lo-qmb" customClass="GIDSignInButton">
+                                <rect key="frame" x="127.5" y="371" width="120" height="45"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="0Gt-AB-hCx"/>
+                                    <constraint firstAttribute="width" constant="120" id="cVH-gy-rUT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-JS-cuE">
+                                <rect key="frame" x="157.5" y="439" width="60" height="30"/>
+                                <state key="normal" title="Sing Out"/>
+                                <connections>
+                                    <action selector="singut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFR-NK-KY7"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mwj-GH-Zm1">
+                                <rect key="frame" x="0.0" y="118" width="375" height="153"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="28k-G8-y5S"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvL-If-4eQ">
+                                <rect key="frame" x="138" y="477" width="99" height="30"/>
+                                <state key="normal" title="Login Linkedin"/>
+                                <connections>
+                                    <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="IWI-lt-Ek4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVp-WY-Uw7">
+                                <rect key="frame" x="131.5" y="515" width="112" height="30"/>
+                                <state key="normal" title="LogOut Linkedin"/>
+                                <connections>
+                                    <action selector="logout" destination="BYZ-38-t0r" eventType="touchUpInside" id="sX1-s0-4bi"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hpd-lo-qmb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="50" id="5yI-Yi-r69"/>
+                            <constraint firstItem="DVp-WY-Uw7" firstAttribute="centerX" secondItem="RvL-If-4eQ" secondAttribute="centerX" id="FS0-Hf-Lf4"/>
+                            <constraint firstItem="YWP-JS-cuE" firstAttribute="top" secondItem="hpd-lo-qmb" secondAttribute="bottom" constant="23" id="PEv-ku-e9h"/>
+                            <constraint firstItem="YWP-JS-cuE" firstAttribute="centerX" secondItem="hpd-lo-qmb" secondAttribute="centerX" id="RO7-Ni-W2c"/>
+                            <constraint firstItem="hpd-lo-qmb" firstAttribute="top" secondItem="Mwj-GH-Zm1" secondAttribute="bottom" constant="100" id="bAb-y5-Wxi"/>
+                            <constraint firstItem="RvL-If-4eQ" firstAttribute="top" secondItem="YWP-JS-cuE" secondAttribute="bottom" constant="8" id="bqQ-Ke-J42"/>
+                            <constraint firstItem="DVp-WY-Uw7" firstAttribute="top" secondItem="RvL-If-4eQ" secondAttribute="bottom" constant="8" id="diD-Eh-vbH"/>
+                            <constraint firstItem="RvL-If-4eQ" firstAttribute="centerX" secondItem="YWP-JS-cuE" secondAttribute="centerX" id="n0T-E3-RR4"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rIa-cc-qj1"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uVl-X8-6v9"/>
+                            <constraint firstItem="hpd-lo-qmb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wDg-zf-eEm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="token" destination="Mwj-GH-Zm1" id="0Vp-pg-uww"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

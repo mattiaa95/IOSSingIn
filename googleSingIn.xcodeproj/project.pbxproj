@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35E9080F9915930CF2156DB6 /* Pods_googleSingIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9660E111C12625ECEE533A7 /* Pods_googleSingIn.framework */; };
+		3AE06B70AB4570667AE22EC4 /* Pods_googleSingInTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34505D914849607A2051E798 /* Pods_googleSingInTests.framework */; };
 		49DBAC1222300DD5004FD76D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBAC1122300DD5004FD76D /* AppDelegate.swift */; };
 		49DBAC1422300DD5004FD76D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DBAC1322300DD5004FD76D /* ViewController.swift */; };
 		49DBAC1722300DD5004FD76D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49DBAC1522300DD5004FD76D /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28C2B2294747EBF0DD93AE67 /* Pods-googleSingIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-googleSingIn.release.xcconfig"; path = "Pods/Target Support Files/Pods-googleSingIn/Pods-googleSingIn.release.xcconfig"; sourceTree = "<group>"; };
+		34505D914849607A2051E798 /* Pods_googleSingInTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_googleSingInTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DBAC0E22300DD5004FD76D /* googleSingIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = googleSingIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DBAC1122300DD5004FD76D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49DBAC1322300DD5004FD76D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +40,10 @@
 		49DBAC2222300DD7004FD76D /* googleSingInTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = googleSingInTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49DBAC2622300DD7004FD76D /* googleSingInTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = googleSingInTests.swift; sourceTree = "<group>"; };
 		49DBAC2822300DD7004FD76D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9660E111C12625ECEE533A7 /* Pods_googleSingIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_googleSingIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC4F319B57CE6A1EA820829D /* Pods-googleSingInTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-googleSingInTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-googleSingInTests/Pods-googleSingInTests.release.xcconfig"; sourceTree = "<group>"; };
+		F19386BB3F9547499E8C4092 /* Pods-googleSingInTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-googleSingInTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-googleSingInTests/Pods-googleSingInTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F568700DC1D2398A0E5C405F /* Pods-googleSingIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-googleSingIn.debug.xcconfig"; path = "Pods/Target Support Files/Pods-googleSingIn/Pods-googleSingIn.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E9080F9915930CF2156DB6 /* Pods_googleSingIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE06B70AB4570667AE22EC4 /* Pods_googleSingInTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +72,8 @@
 				49DBAC1022300DD5004FD76D /* googleSingIn */,
 				49DBAC2522300DD7004FD76D /* googleSingInTests */,
 				49DBAC0F22300DD5004FD76D /* Products */,
+				85BEB240406117EF458C8EDA /* Pods */,
+				91C69853C74EA389651C5D69 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +108,26 @@
 			path = googleSingInTests;
 			sourceTree = "<group>";
 		};
+		85BEB240406117EF458C8EDA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F568700DC1D2398A0E5C405F /* Pods-googleSingIn.debug.xcconfig */,
+				28C2B2294747EBF0DD93AE67 /* Pods-googleSingIn.release.xcconfig */,
+				F19386BB3F9547499E8C4092 /* Pods-googleSingInTests.debug.xcconfig */,
+				EC4F319B57CE6A1EA820829D /* Pods-googleSingInTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		91C69853C74EA389651C5D69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9660E111C12625ECEE533A7 /* Pods_googleSingIn.framework */,
+				34505D914849607A2051E798 /* Pods_googleSingInTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +135,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49DBAC2B22300DD7004FD76D /* Build configuration list for PBXNativeTarget "googleSingIn" */;
 			buildPhases = (
+				26FC86FA94DD72CAD4C35379 /* [CP] Check Pods Manifest.lock */,
 				49DBAC0A22300DD5004FD76D /* Sources */,
 				49DBAC0B22300DD5004FD76D /* Frameworks */,
 				49DBAC0C22300DD5004FD76D /* Resources */,
+				0C8741F7C52FA5C4CB66B1F0 /* [CP] Embed Pods Frameworks */,
+				E3408166E8E45168E46D0EE6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,6 +155,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49DBAC2E22300DD7004FD76D /* Build configuration list for PBXNativeTarget "googleSingInTests" */;
 			buildPhases = (
+				22D95802B36B6FD5493EAC61 /* [CP] Check Pods Manifest.lock */,
 				49DBAC1E22300DD7004FD76D /* Sources */,
 				49DBAC1F22300DD7004FD76D /* Frameworks */,
 				49DBAC2022300DD7004FD76D /* Resources */,
@@ -191,6 +227,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C8741F7C52FA5C4CB66B1F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-googleSingIn/Pods-googleSingIn-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IOSLinkedInAPIFix/IOSLinkedInAPIFix.framework",
+				"${BUILT_PRODUCTS_DIR}/LinkedinSwift/LinkedinSwift.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IOSLinkedInAPIFix.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LinkedinSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-googleSingIn/Pods-googleSingIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		22D95802B36B6FD5493EAC61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-googleSingInTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26FC86FA94DD72CAD4C35379 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-googleSingIn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E3408166E8E45168E46D0EE6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-googleSingIn/Pods-googleSingIn-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-googleSingIn/Pods-googleSingIn-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49DBAC0A22300DD5004FD76D /* Sources */ = {
@@ -358,6 +497,7 @@
 		};
 		49DBAC2C22300DD7004FD76D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F568700DC1D2398A0E5C405F /* Pods-googleSingIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -367,7 +507,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-Atos.googleSingIn";
+				PRODUCT_BUNDLE_IDENTIFIER = Atos.googleSingIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -376,6 +516,7 @@
 		};
 		49DBAC2D22300DD7004FD76D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C2B2294747EBF0DD93AE67 /* Pods-googleSingIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -385,7 +526,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "-Atos.googleSingIn";
+				PRODUCT_BUNDLE_IDENTIFIER = Atos.googleSingIn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -394,6 +535,7 @@
 		};
 		49DBAC2F22300DD7004FD76D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F19386BB3F9547499E8C4092 /* Pods-googleSingInTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +557,7 @@
 		};
 		49DBAC3022300DD7004FD76D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC4F319B57CE6A1EA820829D /* Pods-googleSingInTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
