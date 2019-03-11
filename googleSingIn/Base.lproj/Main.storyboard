@@ -18,59 +18,93 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpd-lo-qmb" customClass="GIDSignInButton">
-                                <rect key="frame" x="127.5" y="371" width="120" height="45"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="0Gt-AB-hCx"/>
-                                    <constraint firstAttribute="width" constant="120" id="cVH-gy-rUT"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-JS-cuE">
-                                <rect key="frame" x="157.5" y="439" width="60" height="30"/>
-                                <state key="normal" title="Sing Out"/>
-                                <connections>
-                                    <action selector="singut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFR-NK-KY7"/>
-                                </connections>
-                            </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Mwj-GH-Zm1">
-                                <rect key="frame" x="0.0" y="118" width="375" height="153"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="246"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="153" id="28k-G8-y5S"/>
+                                    <constraint firstAttribute="height" constant="246" id="KFd-Bt-UxQ"/>
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWP-JS-cuE">
+                                <rect key="frame" x="131" y="309" width="113" height="30"/>
+                                <state key="normal" title="Sing Out Google"/>
+                                <connections>
+                                    <action selector="singut:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KFR-NK-KY7"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RvL-If-4eQ">
-                                <rect key="frame" x="138" y="477" width="99" height="30"/>
+                                <rect key="frame" x="138" y="347" width="99" height="30"/>
                                 <state key="normal" title="Login Linkedin"/>
                                 <connections>
                                     <action selector="login" destination="BYZ-38-t0r" eventType="touchUpInside" id="IWI-lt-Ek4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVp-WY-Uw7">
-                                <rect key="frame" x="131.5" y="515" width="112" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVp-WY-Uw7">
+                                <rect key="frame" x="131.5" y="385" width="112" height="30"/>
                                 <state key="normal" title="LogOut Linkedin"/>
                                 <connections>
                                     <action selector="logout" destination="BYZ-38-t0r" eventType="touchUpInside" id="sX1-s0-4bi"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JYg-RD-fVy">
+                                <rect key="frame" x="130.5" y="423" width="114" height="30"/>
+                                <state key="normal" title="Facebook SingIn"/>
+                                <connections>
+                                    <action selector="loginButtonFacebook" destination="BYZ-38-t0r" eventType="touchUpInside" id="fVV-tr-Wgn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yli-In-x74">
+                                <rect key="frame" x="126.5" y="461" width="122" height="30"/>
+                                <state key="normal" title="Facebook LogOut"/>
+                                <connections>
+                                    <action selector="logOutButtonFacebook" destination="BYZ-38-t0r" eventType="touchUpInside" id="TKl-gV-0d7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Tm-JE-6yD">
+                                <rect key="frame" x="143" y="499" width="89" height="30"/>
+                                <state key="normal" title="Twitter Login"/>
+                                <connections>
+                                    <action selector="logInTwitter" destination="BYZ-38-t0r" eventType="touchUpInside" id="VqG-Wh-0is"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gd-Ay-siE">
+                                <rect key="frame" x="139.5" y="274" width="96" height="30"/>
+                                <state key="normal" title="Google SingIn"/>
+                                <connections>
+                                    <action selector="logimByGoogle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zuh-Kt-tkZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hpd-lo-qmb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="50" id="5yI-Yi-r69"/>
-                            <constraint firstItem="DVp-WY-Uw7" firstAttribute="centerX" secondItem="RvL-If-4eQ" secondAttribute="centerX" id="FS0-Hf-Lf4"/>
-                            <constraint firstItem="YWP-JS-cuE" firstAttribute="top" secondItem="hpd-lo-qmb" secondAttribute="bottom" constant="23" id="PEv-ku-e9h"/>
-                            <constraint firstItem="YWP-JS-cuE" firstAttribute="centerX" secondItem="hpd-lo-qmb" secondAttribute="centerX" id="RO7-Ni-W2c"/>
-                            <constraint firstItem="hpd-lo-qmb" firstAttribute="top" secondItem="Mwj-GH-Zm1" secondAttribute="bottom" constant="100" id="bAb-y5-Wxi"/>
-                            <constraint firstItem="RvL-If-4eQ" firstAttribute="top" secondItem="YWP-JS-cuE" secondAttribute="bottom" constant="8" id="bqQ-Ke-J42"/>
-                            <constraint firstItem="DVp-WY-Uw7" firstAttribute="top" secondItem="RvL-If-4eQ" secondAttribute="bottom" constant="8" id="diD-Eh-vbH"/>
-                            <constraint firstItem="RvL-If-4eQ" firstAttribute="centerX" secondItem="YWP-JS-cuE" secondAttribute="centerX" id="n0T-E3-RR4"/>
-                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="rIa-cc-qj1"/>
-                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uVl-X8-6v9"/>
-                            <constraint firstItem="hpd-lo-qmb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wDg-zf-eEm"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="RvL-If-4eQ" secondAttribute="centerX" id="1pa-SQ-aeB"/>
+                            <constraint firstItem="RvL-If-4eQ" firstAttribute="centerX" secondItem="YWP-JS-cuE" secondAttribute="centerX" id="2eR-uW-rsb"/>
+                            <constraint firstItem="3gd-Ay-siE" firstAttribute="centerX" secondItem="Mwj-GH-Zm1" secondAttribute="centerX" id="40d-cM-53L"/>
+                            <constraint firstItem="YWP-JS-cuE" firstAttribute="top" secondItem="3gd-Ay-siE" secondAttribute="bottom" constant="5" id="7qg-Za-Tf8"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="BH8-B1-K9v"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="D1r-aE-2mi"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JFo-Np-jzh"/>
+                            <constraint firstItem="yli-In-x74" firstAttribute="centerX" secondItem="JYg-RD-fVy" secondAttribute="centerX" id="KKL-db-DHL"/>
+                            <constraint firstItem="YWP-JS-cuE" firstAttribute="centerX" secondItem="3gd-Ay-siE" secondAttribute="centerX" id="Nvv-he-s7Y"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="JYg-RD-fVy" secondAttribute="centerX" id="Q7l-Zu-06g"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="3gd-Ay-siE" secondAttribute="centerX" id="Xxf-pr-F3j"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="YWP-JS-cuE" secondAttribute="centerX" id="ZAa-LW-TiL"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bco-6G-YH7"/>
+                            <constraint firstItem="DVp-WY-Uw7" firstAttribute="top" secondItem="RvL-If-4eQ" secondAttribute="bottom" constant="8" id="cgB-nJ-fqr"/>
+                            <constraint firstItem="0Tm-JE-6yD" firstAttribute="centerX" secondItem="yli-In-x74" secondAttribute="centerX" id="g45-hQ-WVI"/>
+                            <constraint firstItem="3gd-Ay-siE" firstAttribute="top" secondItem="Mwj-GH-Zm1" secondAttribute="bottom" constant="8" id="hQZ-CD-hG5"/>
+                            <constraint firstItem="yli-In-x74" firstAttribute="top" secondItem="JYg-RD-fVy" secondAttribute="bottom" constant="8" id="hWK-UU-32N"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="yli-In-x74" secondAttribute="centerX" id="l63-7F-tgl"/>
+                            <constraint firstItem="JYg-RD-fVy" firstAttribute="top" secondItem="DVp-WY-Uw7" secondAttribute="bottom" constant="8" id="ogb-je-KNn"/>
+                            <constraint firstItem="JYg-RD-fVy" firstAttribute="centerX" secondItem="DVp-WY-Uw7" secondAttribute="centerX" id="pSl-Hp-Bxc"/>
+                            <constraint firstItem="0Tm-JE-6yD" firstAttribute="top" secondItem="yli-In-x74" secondAttribute="bottom" constant="8" id="pYs-Rn-MBO"/>
+                            <constraint firstItem="DVp-WY-Uw7" firstAttribute="centerX" secondItem="RvL-If-4eQ" secondAttribute="centerX" id="q1P-iP-ftf"/>
+                            <constraint firstItem="RvL-If-4eQ" firstAttribute="top" secondItem="YWP-JS-cuE" secondAttribute="bottom" constant="8" id="uU1-Ek-C9x"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vDt-m1-qBG"/>
+                            <constraint firstItem="Mwj-GH-Zm1" firstAttribute="centerX" secondItem="DVp-WY-Uw7" secondAttribute="centerX" id="yiG-js-pAO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

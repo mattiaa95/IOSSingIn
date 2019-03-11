@@ -12,7 +12,7 @@ import TwitterKit
 import LinkedinSwift
 
 @UIApplicationMain
-class AppDelegate:  UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate:  UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
@@ -44,7 +44,6 @@ class AppDelegate:  UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         GIDSignIn.sharedInstance().clientID = "716695608022-p8eopqh79k7chjphbm6r39nussr0nn0b.apps.googleusercontent.com" // GOOGLE
-        GIDSignIn.sharedInstance().delegate = self // GOOGLE
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions) //Facebook
         TWTRTwitter.sharedInstance().start(withConsumerKey:"sKrqCoZG4byvW4ou3Y5Wzdk0W", consumerSecret:"cj6AyKMCUMHDHXS8cfDJ0T8TCYjkjgB5qCYGKG0bWMeGXbheOq") // Twitter
         return true
@@ -70,28 +69,6 @@ class AppDelegate:  UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
-              withError error: Error!) {
-        if let error = error {
-            print("\(error.localizedDescription)")
-        } else {
-            
-            let idToken = user.authentication.idToken
-            NotificationCenter.default.post(
-                name: Notification.Name(rawValue: "ToggleAuthUINotification"),
-                object: nil,
-                userInfo: ["token": idToken! ])
-        }
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
-              withError error: Error!) {
-        NotificationCenter.default.post(
-            name: Notification.Name(rawValue: "ToggleAuthUINotification"),
-            object: nil,
-            userInfo: ["token": ""])
     }
 
 }
