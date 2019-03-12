@@ -17,37 +17,40 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     
     @IBOutlet weak var token: UITextView!
     
-    let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(clientId: "868pwy7gzu2kok", clientSecret: "rKEGlhWB1kSdNhSA", state: "linkedin\(Int(Date().timeIntervalSince1970))", permissions: ["r_basicprofile", "r_emailaddress"], redirectUrl: "https://github.com/tonyli508/LinkedinSwift"), nativeAppChecker: WebLoginOnly())
+    //Linkedin Data
+    let linkedinHelper = LinkedinSwiftHelper(configuration: LinkedinSwiftConfiguration(
+                                             clientId: "868pwy7gzu2kok",
+                                             clientSecret: "rKEGlhWB1kSdNhSA",
+                                             state: "linkedin\(Int(Date().timeIntervalSince1970))",
+                                             permissions: ["r_basicprofile", "r_emailaddress"],
+                                             redirectUrl: "https://github.com/tonyli508/LinkedinSwift"),
+                                             nativeAppChecker: WebLoginOnly())
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    //GOOGLE
-    
+    //GOOGLE SingIn SingOut
     @IBAction func logimByGoogle(_ sender: Any) {
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().signIn()
     }
-    //MARK:- Google Delegate
-    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-        
-    }
     
+    //Google SingIn Present Ui
     func sign(_ signIn: GIDSignIn!,
               present viewController: UIViewController!) {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    //Google SingIn End take User Data
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!,
                      withError error: Error!) {
         if let error = error  {
              print("\(error)")
         } else {
-            let idToken = user.authentication.idToken
-            print(idToken!)
-            self.token.text = idToken
+            print(user.authentication.idToken!) //SHOW TOKEN
+            self.token.text = user.authentication.idToken //SHOW TOKEN
         }
     }
     
@@ -57,52 +60,12 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     }
     //End Google
     
-    //Facebook custom login
-    @IBAction func loginButtonFacebook() {
-        let loginManager = LoginManager()
-        loginManager.logIn(readPermissions: [.publicProfile], viewController: self) { loginResult in
-            switch loginResult {
-            case .failed(let error):
-                print(error)
-            case .cancelled:
-                print("User cancelled login.")
-            case .success( _, _, let accessToken):
-                print("Logged in!")
-                print(accessToken.authenticationToken)
-                self.token.text = accessToken.authenticationToken
-            }
-        }
-    }
-    
-    //Facebook custom logout
-    @IBAction func logOutButtonFacebook() {
-        let loginManager = LoginManager()
-        loginManager.logOut()
-    }
-    
-    // Twitter login custom
-    @IBAction func logInTwitter() {
-        TWTRTwitter.sharedInstance().logIn {
-            (session, error) -> Void in
-            if (session != nil) {
-                print("token: \(session!.authToken)")
-                print("secretToken: \(session!.authTokenSecret)")
-                self.token.text = session!.authToken
-            } else {
-                print("error: \(error!.localizedDescription)")
-            }
-        }
-
-    }
-    
-
-    /**
-     Login with Linkedin
-     */
+    //LINKEDIN
+    //Login with Linkedin
     @IBAction func login() {
         linkedinHelper.authorizeSuccess({ (lsToken) -> Void in
-            print("Login success LinkedIn lsToken.accessToken: \(String(describing: lsToken.accessToken))")
-            self.token.text = lsToken.accessToken
+            print("Login success LinkedIn lsToken.accessToken: \(String(describing: lsToken.accessToken))") //SHOW TOKEN
+            self.token.text = lsToken.accessToken //SHOW TOKEN
         }, error: { (error) -> Void in
             print("Encounter error: \(error.localizedDescription)")
         }, cancel: { () -> Void in
@@ -113,6 +76,48 @@ class ViewController: UIViewController, GIDSignInDelegate, GIDSignInUIDelegate {
     @IBAction func logout() {
         linkedinHelper.logout()
     }
+    //ENDLINKEDIN
+    
+    //FACEBOOK
+    //Facebook custom login
+    @IBAction func loginButtonFacebook() {
+        let loginManager = LoginManager()
+        loginManager.logIn(readPermissions: [.publicProfile], viewController: self) { loginResult in
+            switch loginResult {
+            case .failed(let error):
+                print(error)
+            case .cancelled:
+                print("User cancelled login.")
+            case .success( _, _, let accessToken):
+                print(accessToken.authenticationToken) //SHOW TOKEN
+                self.token.text = accessToken.authenticationToken //SHOW TOKEN
+            }
+        }
+    }
+    
+    //Facebook custom logout
+    @IBAction func logOutButtonFacebook() {
+        let loginManager = LoginManager()
+        loginManager.logOut()
+    }
+    //End FACEBOOK
+    
+    //TWITTER
+    // Twitter custom login
+    @IBAction func logInTwitter() {
+        TWTRTwitter.sharedInstance().logIn {
+            (session, error) -> Void in
+            if (session != nil) {
+                print("token: \(session!.authToken)") //SHOW TOKEN
+                print("secretToken: \(session!.authTokenSecret)") //SHOW TOKEN
+                self.token.text = session!.authToken //SHOW TOKEN
+            } else {
+                print("error: \(error!.localizedDescription)")
+            }
+        }
+
+    }
+    //END TWITTER
     
 }
 
