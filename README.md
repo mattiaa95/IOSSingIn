@@ -1,10 +1,21 @@
 # IOSSingIn
+Ios social Sing In with multimple socialmedias
 Ios social Sing In with multiple social media
 
 ## Requires:
 
 - Xcode 9 or more
 - CocoaPods: https://guides.cocoapods.org/using/getting-started.html
+
+## Installation
+
+`git clone https://github.com/mattiaa95/IOSSingIn.git`
+
+`cd /IOSSingIn`
+
+`pod install`
+
+Open with Xcode ./googleSingIn.xcworkspace
 
 ### SDK tutorials follow
 
